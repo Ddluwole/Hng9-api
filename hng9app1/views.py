@@ -7,16 +7,6 @@ from django.http import JsonResponse
 
 # Create your views here.
 
-# def Jsonviews(request):
-#     cont = {
-#         "slackUsername": "David",
-#         "backend": True,
-#         "age": 21,
-#         "bio": "I play table tennis and code",
-#     }
-    
-#     return JsonResponse(cont)
-
 @api_view(['GET'])
 def hngapi(request):
     cont = {
@@ -25,4 +15,7 @@ def hngapi(request):
         "age": 21,
         "bio": "I play table tennis and code",
     }
-    return Response(cont)
+    resp= Response(cont)
+    resp["Access-Control-Allow-Origin"] = "*"
+    return resp
+
