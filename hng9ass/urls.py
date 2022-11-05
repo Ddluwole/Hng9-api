@@ -21,6 +21,7 @@ from hng9app1.apps import Hng9App1Config
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.hngapi),
+    # path('hng9ass/', views.hngapi),
+    path('', views.operation),
     
 ]
